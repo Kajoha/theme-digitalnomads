@@ -1,0 +1,247 @@
+/*
+
+    Theme Name: Digital Nomads
+    Theme URI: 
+    Author: Karen Méndez
+    Author URI: https://kajoha.github.io/karen-mendez/
+    Description: Theme diseñado para servicios de turismo
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/gpl-2.0.html
+    Tags: Travel, Services, flexblox, CSS grid, mobile first
+    Text Domain: digitalnomads
+
+ */
+
+:root {
+    /** Fuentes **/
+    --primaryFont : 'Rubik', sans-serif;
+    --textFont : 'Roboto', sans-serif;
+
+    /**colores **/
+
+    --primaryBlue: #09697b;
+    --secondaryBlue: #17a4b9;
+    --primaryGrey: #89928f;
+    --secondaryGrey: #cfcecd;
+    --primaryGreen: #155f50;
+    --secondaryGreen: #88a573;
+    --primaryHot: #dfbd8d;
+    --primaryFont: #131914;
+    --primaryWhile: #fff;
+}
+
+/** Globales **/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Now 10px = 1rem! */
+}
+
+body {
+    font-size: 16px; /* px fallback */
+    font-size: 2rem; /* default font-size for document */
+    line-height: 1.7; /* a nice line-height */
+    font-family: var(--textFont);
+  }
+
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--primaryFont);
+    padding: 1rem 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 3.6rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/** Header **/
+
+.site-header {
+    background-color: var(--primaryWhile);
+    position: sticky;
+    top: 0;
+}
+
+.content-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 45rem) {
+    .content-nav {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 30%;
+        margin: 0;
+    }
+}
+
+/** menu desktop **/
+
+.menu-primary {
+    display: none;
+}
+
+@media (min-width: 45rem) {
+   .menu-primary {
+    display: block;
+   }
+}
+
+.menu-primary ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.menu-primary a:hover {
+    color: var(--primaryWhile);
+}
+
+@media (min-width: 45rem) {
+    .menu-primary a {
+        color: var(--primaryBlue);
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+    }
+
+    /** animación **/
+    .menu-primary a::before,
+    .menu-primary a::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: var(--primaryBlue);
+        z-index: -1;
+        transform: scaleX(0);
+      /**  transition: transform .5s; **/
+    }
+    .menu-primary a::before{
+        top: 0;
+      /**  transform-origin: left; **/
+    }
+    .menu-primary a::after{
+        top: 50%;
+       /** transform-origin: right; **/
+    }
+    
+    .menu-primary a:hover::before{
+        transform: scaleX(1);
+    }
+    .menu-primary a:hover::after{
+        transform: scaleX(1);
+    }
+}
+
+
+.menu-primary .current_page_item {
+    border-bottom: 0.3rem solid var(--primaryBlue);
+}
+
+/** menu responsive **/
+
+.slicknav_menu {
+   background-color: var(--primaryWhile);
+   padding: 0;
+}
+
+.slicknav_menu a {
+    color: var(--primaryBlue);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.slicknav_menu a:hover {
+    background-color: var(--primaryBlue);
+    color: var(--primaryWhile);
+}
+
+.slicknav_btn {
+    background-color: var(--primaryBlue);
+}
+
+@media (min-width: 45rem) {
+    .slicknav_menu {
+        display: none;
+    }
+}
+
+.site-footer {
+    padding: 2rem;
+background-color: var(--primaryGrey);
+}
+
+.site-footer a {
+   color: var(--primaryWhile);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/** estilo de páginas **/
+/** estilo general - simple page**/
+.banner-page {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/** página principal **/
