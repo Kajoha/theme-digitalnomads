@@ -20,12 +20,11 @@
 
     /**colores **/
 
-    --primaryBlue: #09697b;
+    --primaryBlue: #264E2C;
     --secondaryBlue: #17a4b9;
     --primaryGrey: #89928f;
     --secondaryGrey: #cfcecd;
-    --primaryGreen: #155f50;
-    --secondaryGreen: #88a573;
+    --primaryGreen: #72B652;
     --primaryHot: #dfbd8d;
     --primaryFont: #131914;
     --primaryWhile: #fff;
@@ -57,6 +56,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
+    text-transform: uppercase;
     font-size: 6rem;
 }
 
@@ -99,6 +99,7 @@ img {
     background-color: var(--primaryWhile);
     position: sticky;
     top: 0;
+    z-index: 5;
 }
 
 .content-nav {
@@ -123,6 +124,11 @@ img {
         width: 30%;
         margin: 0;
     }
+}
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 8rem;
 }
 
 /** menu desktop **/
@@ -153,6 +159,7 @@ img {
         font-size: 1.5rem;
         padding: 0.5rem 1rem;
         position: relative;
+        font-weight: 500;
         z-index: 1;
         text-transform: uppercase;
     }
@@ -243,6 +250,26 @@ background-color: var(--primaryGrey);
     object-fit: cover;
     object-position: bottom;
 }
+
+.on-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 45rem) {
+    .on-sidebar {
+        gap: 6rem;
+        flex-direction: row;
+    }
+    .sidebar {
+        width: 25%;
+    }
+    
+    .content_noSidebar {
+        width: 75%;
+    }
+}
+
 
 /** página principal/Home **/
 

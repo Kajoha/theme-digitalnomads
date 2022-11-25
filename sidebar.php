@@ -1,5 +1,5 @@
-<aside class="sidebar">
-    <h2>Sidebar here</h2>
+<aside>
+    <?php dynamic_sidebar('sidebar_blog') ?>
 </aside>
 
 <?php
