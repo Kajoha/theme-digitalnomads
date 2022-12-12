@@ -14,7 +14,7 @@
     <header class="site-header">
         <div class="content">
             <div class="content-nav">
-                <div class="logo"><img src="<?php echo get_template_directory_uri(); ?> /img/logo-verde.png" alt="">
+                <div class="logo"><img src="<?php echo get_template_directory_uri(); ?> /img/nuevo.png" alt="">
                 </div>
                 <?php $args = array(
                     'theme_location' => 'menu-primary',

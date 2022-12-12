@@ -14,6 +14,10 @@ function digitalnomads_setup()
 
     // agregar imagenes de tamños personalizados
     add_image_size('square', 350, 350, true);
+    add_image_size('portrait', 350, 724, true);
+    add_image_size('cajas', 400, 375, true);
+    add_image_size('medium', 700, 400, true);
+    add_image_size('blog-setup', 966, 644, true);
 }
 add_action('after_setup_theme', 'digitalnomads_setup');
 

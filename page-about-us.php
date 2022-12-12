@@ -8,6 +8,7 @@ endif; ?>
 <main class="content page section on-sidebar">
     <div class="content-primary content_noSidebar">
         <?php get_template_part('template-parts/global-page'); ?>
+
     </div>
     <div class="sidebar">
         <?php get_sidebar('sidebar_blog');

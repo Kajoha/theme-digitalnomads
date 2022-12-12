@@ -21,20 +21,23 @@ get_header(); ?>
 
         <?php $gallery = get_post_gallery(get_the_ID(), false);
             $img_gallery_ID = explode(',', $gallery['ids']);
-
-
             ?>
 
         <ul class="galley-img">
             <?php
+                $i = 1;
                 foreach ($img_gallery_ID as $id) :
-                    $imgThumb = wp_get_attachment_image_src($id, 'square');
-
-                    echo "<pre>";
-
-                    echo "</pre>";
-                endforeach;
+                    $size = ($i == 3 || $i == 5) ? 'portrait' : 'square';
+                    $imgThumb = wp_get_attachment_image_src($id, $size)[0];
+                    $imgLarge = wp_get_attachment_image_src($id, 'full')[0];
                 ?>
+            <li>
+                <a href="<?php echo $imgLarge  ?>" data-lightbox="gallery">
+                    <img src="<?php echo $imgThumb; ?>" alt="Imagen"></a>
+            </li>
+
+            <?php $i++;
+                endforeach; ?>
         </ul>
 
         <?php endwhile; ?>
