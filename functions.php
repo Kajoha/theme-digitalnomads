@@ -3,6 +3,7 @@
 /** Consultas reutilizables */
 
 require get_template_directory() . '/inc/queries.php';
+require get_template_directory() . '/inc/shortcodes.php';
 
 // Cuando el tema es activado
 
@@ -38,9 +39,7 @@ function digitalnomads_scripts_styles()
 {
 
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
-
     wp_enqueue_style('slicknavCSS', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.0');
-
     wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap', array(), '1.0.0');
 
 
@@ -48,17 +47,21 @@ function digitalnomads_scripts_styles()
         wp_enqueue_style('lightboxCSS', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.2');
     endif;
 
-
+    if (is_page('services')) : //sirve para identificar en que pagina quiero que se muestre la galeria
+        wp_enqueue_style('leaftletCSS', 'https://unpkg.com/leaflet@1.9.3/dist/leaflet.css', array(), '1.9.3');
+    endif;
 
     //hoja de estilo principal
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googleFont'), '1.0.0');
-
     wp_enqueue_script('slicknavJS', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.0', true);
-
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery', 'slicknavJS'), '1.0.0', true);
 
     if (is_page('galleria')) :
         wp_enqueue_script('lightboxJS', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery', 'slicknavJS'), '2.11.2', true);
+    endif;
+
+    if (is_page('services')) :
+        wp_enqueue_script('leaftletJS', 'https://unpkg.com/leaflet@1.9.3/dist/leaflet.js', array(), '1.9.3', true);
     endif;
 }
 
@@ -79,8 +82,8 @@ function digitalnomads_widgets()
     ));
 
     register_sidebar(array(
-        'name' => 'Sidebar services',
-        'id' => 'sidebar_services',
+        'name' => 'Sidebar page',
+        'id' => 'sidebar_page',
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
