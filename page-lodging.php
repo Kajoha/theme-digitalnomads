@@ -24,63 +24,69 @@ endif; ?>
 <div class="submenu-banner-ul">
     <div class="content title submenu">
         <ul class="submenu-content">
-            <li class="submenu-items"><a href="#hotels">Hotels</a></li>
-            <li class="submenu-items"><a href="#rentals">Rentals</a></li>
-            <li class="submenu-items"><a href="#real-estate-brokers">Real Estate Brokers</a></li>
+            <li class="submenu-items"><a href="#hotels"><?php the_field('item_menu_1'); ?></a></li>
+            <li class="submenu-items"><a href="#rentals"><?php the_field('item_menu_2'); ?></a></li>
+            <li class="submenu-items"><a href="#real-estate-brokers"><?php the_field('item_menu_3'); ?></a></li>
         </ul>
     </div>
 </div>
 <main class="content page section ">
-    <section id="hotels" class="section-content">
+    <section id="<?php the_field('id_menu_1'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Hotels</h2>
+            <h2><?php the_field('item_menu_1'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Hotels list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_1'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="rentals" class="section-content">
+    <section id="<?php the_field('id_menu_2'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Rentals</h2>
+            <h2><?php the_field('item_menu_2'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Rentals list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_2'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="real-estate-brokers" class="section-content">
+    <section id="<?php the_field('id_menu_3'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Real Estate Brokers</h2>
+            <h2><?php the_field('item_menu_3'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Real Estate Brokers list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_3'); ?> list</h3>
 
         </div>
 
     </section>
 </main>
 
-<!--Aqui se imprime lo que se coloque en la sección de page  <?php /* the_content(); */ ?> -->
+<!--Aqui se imprime el formulario de contacto-->
 <section id="contanct" class="contact-wrapper">
     <div class="contact-manchas">
         <div class="content page section">
-            <?php the_content(); ?>
+            <div class="form-flex">
+                <div class="form-text">
+                    <h2><?php the_field('title_contact'); ?></h2>
+                    <p><?php the_field('content_contact'); ?></p>
+                </div>
+                <?php the_field('form-text'); ?>
+            </div>
         </div>
     </div>
 </section>

@@ -1,5 +1,4 @@
-<?php /*Esta hoja de estilo se sobrepone al global - agarra las pestañas de la página servicios/transporte */
-get_header(); ?>
+<?php get_header(); ?>
 
 <?php if (has_post_thumbnail()) :
     the_post_thumbnail('blog', array('class' => 'banner-page'));

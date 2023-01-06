@@ -77,11 +77,17 @@ endif; ?>
     </section>
 </main>
 
-<!--Aqui se imprime lo que se coloque en la sección de page  <?php /* the_content(); */ ?> -->
+<!--Aqui se imprime el formulario de contacto-->
 <section id="contanct" class="contact-wrapper">
     <div class="contact-manchas">
         <div class="content page section">
-            <?php the_content(); ?>
+            <div class="form-flex">
+                <div class="form-text">
+                    <h2><?php the_field('title_contact'); ?></h2>
+                    <p><?php the_field('content_contact'); ?></p>
+                </div>
+                <?php the_field('form-text'); ?>
+            </div>
         </div>
     </div>
 </section>

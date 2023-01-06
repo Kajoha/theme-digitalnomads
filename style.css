@@ -144,36 +144,35 @@ img {
 
 /** menu desktop **/
 
-.menu-primary {
-    display: none;
+.menu-primary ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 @media (min-width: 45rem) {
-   .menu-primary {
-    display: block;
-   }
+    .menu-primary ul {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
 }
 
-.menu-primary ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-}
 
 .menu-primary a:hover {
     color: var(--secondaryGrey);
 }
 
+.menu-primary a {
+    color: var(--primaryWhile);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    font-weight: 500;
+    z-index: 121;
+    text-transform: uppercase;
+}
+
 @media (min-width: 45rem) {
-    .menu-primary a {
-        color: var(--primaryWhile);
-        font-size: 1.5rem;
-        padding: 0.5rem 1rem;
-        position: relative;
-        font-weight: 500;
-        z-index: 121;
-        text-transform: uppercase;
-    }
 
     /** animación **/
     .menu-primary a::before,
@@ -212,6 +211,10 @@ img {
 }
 
 /** menu responsive **/
+
+body.home .slicknav_menu {
+    background-color: transparent;
+}
 
 .slicknav_menu {
    background-color: var(--primaryWhile);
@@ -304,6 +307,7 @@ img {
 .footer-montana {
     display: block;
     margin: 0;
+    padding-top: 15rem;
 }
 
 /** estilo de páginas **/
@@ -347,6 +351,12 @@ img {
         align-items: center;
         color: var(--secondaryGrey);
     }
+
+    .sidebar-blog {
+        padding: 3rem;
+        width: 30%;
+    }
+
     .sidebar-title h2,h3,h4,h5{
         color: var(--primaryWhile);
        font-weight: 500;
@@ -487,8 +497,6 @@ img {
     height: 35rem;
 }
 
-/** página principal/Home **/
-/** página de aterrizaje para secciones de servicios/transporte **/
 /**sections del sub menu**/
 
 .section-content {
@@ -519,7 +527,98 @@ img {
     margin-bottom: 3rem;
 }
 
+/** página principal/Home **/
+/** Estilos en el header de home **/
+body.home .site-header {
+    padding-top: 3rem;
+    height: auto;
+    min-height: 50rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.tagline {
+    color: var(--primaryWhile);
+    margin-top: 10rem;
+}
+
+@media (min-width: 45rem) {
+    body.home .site-header {
+        height: 80vh;
+    }
+
+    .tagline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20%;
+        padding-right: 20%;
+        text-align: center;
+    }
+
+    .tagline p {
+        color: var(--secondaryGrey);
+        font-size: 1.7rem;
+    }
+}
+
+.home-welcome {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.content-areas {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.content-areas .area-items {
+    flex: 0 0 50%;
+    height: 200px;
+    position: relative;
+}
+
+@media (min-width: 45rem) {
+    .content-areas .area-items {
+        flex: 0 0 25%;
+    }
+}
+
+.content-areas .area-items img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.content-areas .area-items::after {
+    content: '';
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75),
+    );
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+
+.margin-home {
+    margin-top: 15rem;
+}
+
+
+
+
+
+/** página de aterrizaje para secciones de servicios/transporte **/
+
 /** items **/
+
 .items-list {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -542,6 +641,8 @@ img {
         gap: 2rem;
      }
 }
+
+/** Card Services|transportation... **/
 
 .card {
     display: flex;
@@ -603,6 +704,8 @@ img {
     margin: 0;
     padding-bottom: 2rem;
 }
+
+/** Sección de lista en services|transportation **/
 
 .card-mini img {
     width: 30%;
@@ -692,3 +795,99 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
      }
  }
  
+/** pagina de blog, estilos **/
+
+.title-blog-category {
+    margin: 0;
+}
+
+.description-blog-category {
+    color: var(--primaryGreen);
+    margin-top: 0;
+}
+
+.blog-list {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.blog-list-items {
+    display: flex;
+    flex-direction:column;
+    gap: 2rem;
+}
+
+@media (min-width: 55rem) {
+    .blog-list-items {
+        flex-direction: row;
+    }
+    .list-items-right {
+        width: 40%;
+    }
+    .list-items-left {
+         width: 60%;
+    }
+
+ }
+
+.list-items-right {
+    width: 100%;
+}
+
+.list-items-right-img img {
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+    display: block;
+
+}
+
+.list-items-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-items-left h2 {
+    padding-top: 0;
+    font-weight: 700;
+    color: var(--secondaryGreen);
+}
+
+.list-items-left p {
+   margin: 0;
+   color: var(--secondaryGreen);
+}
+
+.list-items-left a {
+    color: var(--primaryGreen);
+ }
+
+ .list-items-date {
+    font-size: 1.4rem;
+    color: var(--secondaryBlue);
+ }
+
+ .list-items-left .post-categories {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: var(--primaryGreen);
+    text-transform: uppercase;
+}
+
+.list-items-left .post-categories a {
+     font-size: 1.3rem;
+    padding: .5rem;
+    border: .1rem solid var(--secondaryGrey);
+    border-radius: .5rem;
+ }
+
+ .list-items-left .post-categories a:hover {
+    color: var(--secondaryBlue);
+    background-color: var(--secondaryGrey);
+ }

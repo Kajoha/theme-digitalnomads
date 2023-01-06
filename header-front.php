@@ -8,10 +8,11 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
 
     <header class="site-header">
+        <!-- abro Barra de navegación-->
         <div class="content">
             <div class="content-nav">
                 <div class="logo"><a href="http://localhost/wordpress/"><img
@@ -20,9 +21,15 @@
                 <?php $args = array(
                     'theme_location' => 'menu-primary',
                     'container' => 'nav',
-                    'container_class' => 'menu-primary'
+                    'container_class' => 'menu-primary' /*me permite poner una clase al menu*/
                 );
                 wp_nav_menu($args); ?>
             </div>
         </div>
+
+        <div class="tagline text-center ">
+            <h1><?php the_field('header_hero'); ?></h1>
+            <p><?php the_field('content_hero'); ?></p>
+        </div>
     </header>
+    <!-- cierro Barra de navegación-->

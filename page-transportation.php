@@ -24,78 +24,84 @@ endif; ?>
 <div class="submenu-banner-ul">
     <div class="content title submenu">
         <ul class="submenu-content">
-            <li class="submenu-items"><a href="#car-rentals">Car Rentals</a></li>
-            <li class="submenu-items"><a href="#shuttles">Shuttles</a></li>
-            <li class="submenu-items"><a href="#private-drivers">Private Drivers</a></li>
-            <li class="submenu-items"><a href="#other-transportation">Other</a></li>
+            <li class="submenu-items"><a href="#car-rentals"><?php the_field('item_menu_1'); ?></a></li>
+            <li class="submenu-items"><a href="#shuttles"><?php the_field('item_menu_2'); ?></a></li>
+            <li class="submenu-items"><a href="#private-drivers"><?php the_field('item_menu_3'); ?></a></li>
+            <li class="submenu-items"><a href="#other-transportation"><?php the_field('item_menu_4'); ?></a></li>
         </ul>
     </div>
 </div>
 <main class="content page section ">
-    <section id="car-rental" class="section-content">
+    <section id="<?php the_field('id_menu_1'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Car Rentals</h2>
+            <h2><?php the_field('item_menu_1'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Car Rentals list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_1'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="shuttles" class="section-content">
+    <section id="<?php the_field('id_menu_2'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Shuttles</h2>
+            <h2><?php the_field('item_menu_2'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Shuttles list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_2'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="private-drivers" class="section-content">
+    <section id="<?php the_field('id_menu_3'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Private Drivers</h2>
+            <h2><?php the_field('item_menu_3'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Private Drivers list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_3'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="other-transportation" class="section-content">
+    <section id="<?php the_field('id_menu_4'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Other</h2>
+            <h2><?php the_field('item_menu_4'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Other</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_4'); ?></h3>
         </div>
     </section>
 
 </main>
 
-<!--Aqui se imprime lo que se coloque en la sección de page  <?php /* the_content(); */ ?> -->
+<!--Aqui se imprime el formulario de contacto-->
 <section id="contanct" class="contact-wrapper">
     <div class="contact-manchas">
         <div class="content page section">
-            <?php the_content(); ?>
+            <div class="form-flex">
+                <div class="form-text">
+                    <h2><?php the_field('title_contact'); ?></h2>
+                    <p><?php the_field('content_contact'); ?></p>
+                </div>
+                <?php the_field('form-text'); ?>
+            </div>
         </div>
     </div>
 </section>

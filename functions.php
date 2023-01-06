@@ -9,9 +9,11 @@ require get_template_directory() . '/inc/shortcodes.php';
 
 function digitalnomads_setup()
 {
-
     // habilitar imagenes destacadas
     add_theme_support('post-thumbnails');
+
+    // Titulos SEO
+    add_theme_support('title-tag');
 
     // agregar imagenes de tamños personalizados
     add_image_size('square', 350, 350, true);
@@ -39,7 +41,7 @@ function digitalnomads_scripts_styles()
 {
 
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
-    wp_enqueue_style('slicknavCSS', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.0');
+    // wp_enqueue_style('slicknavCSS', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.0');
     wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap', array(), '1.0.0');
 
 
@@ -80,15 +82,29 @@ function digitalnomads_widgets()
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
-
-    register_sidebar(array(
-        'name' => 'Sidebar page',
-        'id' => 'sidebar_page',
-        'before_widget' => '<div class="widget">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
 }
 
 add_action('widgets_init', 'digitalnomads_widgets');
+
+// Imagen Hero
+
+function digitalnomads_hero_img()
+{   // para optener el id de la página principal
+    $front_page_id = get_option('page_on_front');
+    // obtener el id de la imagen
+    $id_img = get_field('img_hero', $front_page_id);
+    // obtener la imagen
+    $img = wp_get_attachment_image_src($id_img, 'full')[0];
+
+    //Estilos
+    wp_register_style('custom', false);
+    wp_enqueue_style('custom');
+
+    $img_home_css = "
+        body.home .site-header {
+            background-image: linear-gradient( rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url($img);
+        }
+    ";
+    wp_add_inline_style('custom', $img_home_css);
+}
+add_action('init', 'digitalnomads_hero_img');

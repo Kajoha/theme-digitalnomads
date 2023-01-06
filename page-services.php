@@ -24,25 +24,25 @@ endif; ?>
 <div class="submenu-banner-ul">
     <div class="content title submenu">
         <ul class="submenu-content">
-            <li class="submenu-items"><a href="#tours">Tours</a></li>
-            <li class="submenu-items"><a href="#legal">Legal</a></li>
-            <li class="submenu-items"><a href="#health">Health</a></li>
-            <li class="submenu-items"><a href="#education">Education</a></li>
-            <li class="submenu-items"><a href="#other">Other</a></li>
+            <li class="submenu-items"><a href="#tours"><?php the_field('item_menu_1'); ?></a></li>
+            <li class="submenu-items"><a href="#legal"><?php the_field('item_menu_2'); ?></a></li>
+            <li class="submenu-items"><a href="#health"><?php the_field('item_menu_3'); ?></a></li>
+            <li class="submenu-items"><a href="#education"><?php the_field('item_menu_4'); ?></a></li>
+            <li class="submenu-items"><a href="#other"><?php the_field('item_menu_5'); ?></a></li>
         </ul>
     </div>
 </div>
 <main class="content page section ">
-    <section id="tours" class="section-content">
+    <section id="<?php the_field('id_menu_1'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Tours</h2>
+            <h2><?php the_field('item_menu_1'); ?></h2>
             <?php
             digitalnomads_list_services(); ?>
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Tours list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_1'); ?> list</h3>
             <?php
             digitalnomads_list_services_mini(); ?>
         </div>
@@ -50,60 +50,60 @@ endif; ?>
 
     </section>
 
-    <section id="legal" class="section-content">
+    <section id="<?php the_field('id_menu_2'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Legal</h2>
+            <h2><?php the_field('item_menu_2'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Legal list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_2'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="health" class="section-content">
+    <section id="<?php the_field('id_menu_3'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Health</h2>
+            <h2><?php the_field('item_menu_3'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Health list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_3'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="education" class="section-content">
+    <section id="<?php the_field('id_menu_4'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Education</h2>
+            <h2><?php the_field('item_menu_4'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Education list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_4'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="other" class="section-content">
+    <section id="<?php the_field('id_menu_5'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Other</h2>
+            <h2><?php the_field('item_menu_5'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Other list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_5'); ?> list</h3>
 
         </div>
 
@@ -111,11 +111,17 @@ endif; ?>
     </section>
 </main>
 
-<!--Aqui se imprime lo que se coloque en la sección de page  <?php /* the_content(); */ ?> -->
+<!--Aqui se imprime el formulario de contacto-->
 <section id="contanct" class="contact-wrapper">
     <div class="contact-manchas">
         <div class="content page section">
-            <?php the_content(); ?>
+            <div class="form-flex">
+                <div class="form-text">
+                    <h2><?php the_field('title_contact'); ?></h2>
+                    <p><?php the_field('content_contact'); ?></p>
+                </div>
+                <?php the_field('form-text'); ?>
+            </div>
         </div>
     </div>
 </section>
