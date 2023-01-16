@@ -24,52 +24,55 @@ endif; ?>
 <div class="submenu-banner-ul">
     <div class="content title submenu">
         <ul class="submenu-content">
-            <li class="submenu-items"><a href="#coworking">Coworking</a></li>
-            <li class="submenu-items"><a href="#meeting-spaces">Meeting Spaces</a></li>
-            <li class="submenu-items"><a href="#resources">Resources</a></li>
+            <li class="submenu-items"><a href="#<?php the_field('id_menu_1'); ?>"><?php the_field('item_menu_1'); ?></a>
+            </li>
+            <li class="submenu-items"><a href="#<?php the_field('id_menu_2'); ?>"><?php the_field('item_menu_2'); ?></a>
+            </li>
+            <li class="submenu-items"><a href="#<?php the_field('id_menu_3'); ?>"><?php the_field('item_menu_3'); ?></a>
+            </li>
         </ul>
     </div>
 </div>
 <main class="content page section ">
-    <section id="coworking" class="section-content">
+    <section id="<?php the_field('id_menu_1'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Coworking</h2>
+            <h2><?php the_field('item_menu_1'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Coworking list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_1'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="meeting-spaces" class="section-content">
+    <section id="<?php the_field('id_menu_2'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Meeting Spaces</h2>
+            <h2><?php the_field('item_menu_2'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Meeting Spaces list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_2'); ?> list</h3>
 
         </div>
 
 
     </section>
 
-    <section id="resources" class="section-content">
+    <section id="<?php the_field('id_menu_3'); ?>" class="section-content">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
-            <h2>Resources</h2>
+            <h2><?php the_field('item_menu_3'); ?></h2>
 
         </div>
         <div class="section-list">
-            <h3 class="section-list-title">Resources list</h3>
+            <h3 class="section-list-title"><?php the_field('item_menu_3'); ?> list</h3>
 
         </div>
 

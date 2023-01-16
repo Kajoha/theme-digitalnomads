@@ -39,12 +39,12 @@ endif; ?>
         <div class="section-items">
             <h2><?php the_field('item_menu_1'); ?></h2>
             <?php
-            digitalnomads_list_services(); ?>
+            digitalnomads_list_tours(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_1'); ?> list</h3>
             <?php
-            digitalnomads_list_services_mini(); ?>
+            digitalnomads_list_tours_mini(); ?>
         </div>
 
 
@@ -55,11 +55,13 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_2'); ?></h2>
-
+            <?php
+            digitalnomads_list_legal(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_2'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_legal_mini(); ?>
         </div>
 
 
@@ -70,11 +72,13 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_3'); ?></h2>
-
+            <?php
+            digitalnomads_list_health(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_3'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_health_mini(); ?>
         </div>
 
 
@@ -85,11 +89,13 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_4'); ?></h2>
-
+            <?php
+            digitalnomads_list_education(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_4'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_education_mini(); ?>
         </div>
 
 
@@ -100,11 +106,13 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_5'); ?></h2>
-
+            <?php
+            digitalnomads_list_other_services(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_5'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_other_services_mini(); ?>
         </div>
 
 

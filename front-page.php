@@ -3,40 +3,74 @@
     <h2><?php the_field('welcome_title'); ?></h2>
     <p><?php the_field('welcome_text'); ?></p>
 </section>
-<div class="home-areas">
+<section class="home-areas">
+
     <ul class="content-areas">
+
         <li class="area-items">
-            <?php $area1 = get_field('area_1');
-            $img = wp_get_attachment_image_src($area1['img_area'], 'mediano')[0];
-            ?>
-            <img src="<?php echo esc_attr($img); ?>" alt="">
-            <p><?php echo esc_html($area1['text_area']);   ?></p>
+            <a class="items-center" href="<?php echo get_permalink(23) ?>">
+
+                <?php $area1 = get_field('area_1');
+                $img = wp_get_attachment_image_src($area1['img_area'], 'mediano')[0];
+                ?>
+                <img src="<?php echo esc_attr($img); ?>" alt="">
+                <p><?php echo esc_html($area1['text_area']);   ?></p>
+                <span>View all</span>
+
+            </a>
         </li>
         <li class="area-items">
-            <?php $area2 = get_field('area_2');
-            $img = wp_get_attachment_image_src($area2['img_area'], 'mediano')[0];
-            ?>
-            <img src="<?php echo esc_attr($img); ?>" alt="">
-            <p><?php echo esc_html($area2['text_area']);   ?></p>
+            <a class="items-center" href="<?php echo get_permalink(26) ?>">
+
+                <?php $area2 = get_field('area_2');
+                $img = wp_get_attachment_image_src($area2['img_area'], 'mediano')[0];
+                ?>
+                <img src="<?php echo esc_attr($img); ?>" alt="">
+                <p><?php echo esc_html($area2['text_area']);   ?></p>
+                <span>View all</span>
+
+            </a>
         </li>
         <li class="area-items">
-            <?php $area3 = get_field('area_3');
-            $img = wp_get_attachment_image_src($area3['img_area'], 'mediano')[0];
-            ?>
-            <img src="<?php echo esc_attr($img); ?>" alt="">
-            <p><?php echo esc_html($area3['text_area']);   ?></p>
+            <a class="items-center" href="<?php echo get_permalink(28) ?>">
+
+                <?php $area3 = get_field('area_3');
+                $img = wp_get_attachment_image_src($area3['img_area'], 'mediano')[0];
+                ?>
+                <img src="<?php echo esc_attr($img); ?>" alt="">
+                <p><?php echo esc_html($area3['text_area']);   ?></p>
+                <span>View all</span>
+
+            </a>
         </li>
         <li class="area-items">
-            <?php $area4 = get_field('area_4');
-            $img = wp_get_attachment_image_src($area4['img_area'], 'mediano')[0];
-            ?>
-            <img src="<?php echo esc_attr($img); ?>" alt="">
-            <p><?php echo esc_html($area4['text_area']);   ?></p>
+            <a class="items-center" href="<?php echo get_permalink(37) ?>">
+
+                <?php $area4 = get_field('area_4');
+                $img = wp_get_attachment_image_src($area4['img_area'], 'mediano')[0];
+                ?>
+                <img src="<?php echo esc_attr($img); ?>" alt="">
+                <p><?php echo esc_html($area4['text_area']);   ?></p>
+                <span>View all</span>
+
+            </a>
         </li>
     </ul>
 
-</div>
+</section>
 
+<section>
+    <div class="margin-home content page section map_home">
+        <?php the_field('map_interactive'); ?>
+        <div class="map_content">
+            <h2>Where can you stay?</h2>
+        </div>
+    </div>
+</section>
+
+<div>
+    <?php the_field('img_home'); ?>
+</div>
 
 <!--Aqui se imprime el formulario de contacto-->
 <section id="contanct" class="contact-wrapper margin-home">
@@ -52,4 +86,9 @@
         </div>
     </div>
 </section>
+
+<section class="content page section margin-home">
+    <?php the_field('blog_post'); ?>
+</section>
+
 <?php get_footer(); ?>

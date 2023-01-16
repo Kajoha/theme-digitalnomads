@@ -14,7 +14,7 @@
     <header class="site-header">
         <div class="content">
             <div class="content-nav">
-                <div class="logo"><a href="http://localhost/wordpress/"><img
+                <div class="logo"><a href="<?php echo site_url('/'); ?>"><img
                             src="<?php echo get_template_directory_uri(); ?> /img/nuevo.png" alt=""></a>
                 </div>
                 <?php $args = array(
