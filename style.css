@@ -119,20 +119,20 @@ img {
 
 .content-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .logo {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
 }
 
 @media (min-width: 45rem) {
     .content-nav {
-        align-items: center;
-        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
     .logo {
@@ -203,6 +203,9 @@ img {
     .menu-primary a:hover::after{
         transform: scaleX(1);
     }
+    .content-menu {
+        display: block;
+    }
 }
 
 
@@ -212,37 +215,44 @@ img {
 
 /** menu responsive **/
 
-body.home .slicknav_menu {
-    background-color: transparent;
-}
-
-.slicknav_menu {
-   background-color: var(--primaryWhile);
-   padding: 0;
-}
-
-.slicknav_menu a {
-    color: var(--primaryBlue);
-    font-size: 1.5rem;
-    text-transform: uppercase;
-}
-
-.slicknav_menu a:hover {
-    background-color: var(--primaryBlue);
-    color: var(--primaryWhile);
-}
-
-.slicknav_btn {
-    background-color: var(--primaryBlue);
+.hambur-menu:hover {
+cursor: pointer;
 }
 
 @media (min-width: 45rem) {
-    .slicknav_menu {
-        display: none;
-    }
+   .hambur-menu {
+    display: none;
+   }
 }
 
+.content-menu {
+    display: none;
+}
 
+.content-menu-mobile {
+    opacity: 0;
+    max-height: 0;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.see {
+    opacity: 1;
+    max-height: 100%;
+    transition-delay: 100ms, 300ms;
+    transition-property: max-height, opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+
+}
+
+@media (min-width: 45rem) {
+   
+    .content-menu {
+        all: unset;
+    }
+ }
 /* Sub menu - section*/
 
 .submenu-banner {
@@ -397,8 +407,15 @@ body.home .slicknav_menu {
 
 .form-flex {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
+
+@media (min-width: 45rem) {
+   
+    .form-flex {
+        flex-direction: row;
+    }
+ }
 
 .form-flex .form-img-mini {
     width: 30%;
@@ -439,9 +456,17 @@ body.home .slicknav_menu {
     background-color: var(--secondaryGrey);
     color: var(--primaryBlue);
     border: none;
-    width: 50%;
-    margin-left: 50%;
+    width: 100%;
 }
+
+@media (min-width: 45rem) {
+   
+    .wpcf7-form .wpcf7-submit { 
+        width: 50%;
+        margin-left: 50%;
+    }
+ }
+
 
 .wpcf7-form .wpcf7-submit:hover {
     background-color: var(--primaryGreen);
@@ -469,10 +494,17 @@ body.home .slicknav_menu {
 
 .contact-wrapper .form-text {
     padding-top: 10rem;
-    padding-right: 7rem;
-    width: 50%;
+    width: 100%;
     color: var(--primaryGrey);
 }
+
+@media (min-width: 45rem) {
+   
+    .contact-wrapper .form-text {
+        padding-right: 7rem;
+        width: 50%;
+    }
+ }
 
 .contact-wrapper .form-text h2{
    color: var(--primaryWhile);
@@ -480,8 +512,15 @@ body.home .slicknav_menu {
 }
 
 .contact-wrapper .form-flex .wpcf7 {
-    width: 50%;
+    width: 100%;
 }
+
+@media (min-width: 45rem) {
+   
+    .contact-wrapper .form-flex .wpcf7 {
+        width: 50%;
+    }
+ }
 
 .contact-wrapper .form-flex {
    gap: 5rem;
@@ -540,7 +579,6 @@ body.home .site-header {
 }
 .tagline {
     color: var(--primaryWhile);
-    margin-top: 10rem;
 }
 
 @media (min-width: 45rem) {
@@ -549,19 +587,118 @@ body.home .site-header {
     }
 
     .tagline {
+        margin-top: 14rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding-left: 20%;
-        padding-right: 20%;
-        text-align: center;
+        justify-content: center;
     }
 
     .tagline p {
         color: var(--secondaryGrey);
-        font-size: 1.7rem;
+        font-size: 3rem;
+        font-weight: 600;
+        text-transform: uppercase;
     }
+
+    .fixed-top {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--primaryBlue) ;
+        padding: 1rem 5rem;
+        height: 10rem;
+        z-index: 1000;
+        transition: background-color 300ms ease-in-out;
+    }
+  
 }
+
+
+
+.Iam {
+    font: normal 4rem/5rem Montserrat, sans-serif;
+    color: #999;
+  }
+  .Iam p {
+    height: 50px;
+   
+    margin-right: 0.3em;
+  }
+  .Iam b {
+    overflow: hidden;
+    height: 50px;
+    top: 40px;
+  }
+  .Iam .innerIam {
+    color: #e74c3c;
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+  
+  
+  /*animation*/
+  -webkit-animation:move 5s;
+     -moz-animation:move 5s;
+      -ms-animation:move 5s;
+       -o-animation:move 5s;
+          animation:move 5s;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count:infinite;
+     -moz-animation-iteration-count:infinite;
+      -ms-animation-iteration-count:infinite;
+       -o-animation-iteration-count:infinite;
+          animation-iteration-count:infinite;
+  /*animation-delay*/
+  -webkit-animation-delay:1s;
+     -moz-animation-delay:1s;
+      -ms-animation-delay:1s;
+       -o-animation-delay:1s;
+          animation-delay:1s;
+  }
+  @keyframes move{
+  0%  { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
+  }
+  
+  @-webkit-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @-moz-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @-o-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+
+
+
+
+
 
 .home-welcome {
     max-width: 800px;
@@ -654,8 +791,11 @@ body.home .site-header {
 .map_box {
     max-width: 100% !important;
 }
-/** página de aterrizaje para secciones de servicios/transporte **/
 
+
+
+
+/** página de aterrizaje para secciones de servicios/transporte **/
 /** items **/
 
 .items-list {

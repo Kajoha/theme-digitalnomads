@@ -3,6 +3,7 @@
     <h2><?php the_field('welcome_title'); ?></h2>
     <p><?php the_field('welcome_text'); ?></p>
 </section>
+
 <section class="home-areas">
 
     <ul class="content-areas">
@@ -88,6 +89,7 @@
 </section>
 
 <section class="content page section margin-home">
+    <h2>RECENT POSTS</h2>
     <?php the_field('blog_post'); ?>
 </section>
 
