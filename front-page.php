@@ -1,8 +1,10 @@
 <?php get_header('front'); ?>
-<section class="home-welcome content page section">
-    <h2><?php the_field('welcome_title'); ?></h2>
-    <p><?php the_field('welcome_text'); ?></p>
-</section>
+<div class="FAQ">
+    <section class="home-welcome content page section margin-home">
+        <h2><?php the_field('welcome_title'); ?></h2>
+        <p><?php the_field('welcome_text'); ?></p>
+    </section>
+</div>
 
 <section class="home-areas">
 

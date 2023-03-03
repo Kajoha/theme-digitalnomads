@@ -49,7 +49,7 @@ endif; ?>
 
     </section>
 
-    <section id="<?php the_field('id_menu_2'); ?>" class="section-content">
+    <section id="<?php the_field('id_menu_2'); ?>" class="section-content margin-home">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
@@ -64,7 +64,7 @@ endif; ?>
 
     </section>
 
-    <section id="<?php the_field('id_menu_3'); ?>" class="section-content">
+    <section id="<?php the_field('id_menu_3'); ?>" class="section-content margin-home">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">

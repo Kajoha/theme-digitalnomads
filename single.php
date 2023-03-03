@@ -10,10 +10,13 @@ get_header(); ?>
     the_post_thumbnail('blog', array('class' => 'banner-page'));
 endif; ?>
 
-<main class="content page section">
+<main class="content page section on-sidebar">
     <div class="content-primary">
         <?php get_template_part('template-parts/global-page'); ?>
-        <h1>Hola soy un mundo</h1>
+
+    </div>
+    <div class="sidebar-services">
+        <h1>Hola aqui voy a poner información sobre precio, region, accesibilidad</h1>
     </div>
 
 </main>
