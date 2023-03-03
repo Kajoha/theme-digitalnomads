@@ -4,7 +4,7 @@
 *Template Name: Template Digital Nomads - workspaces
 Plugin URI:
 Description: Add Widgets
-Version: 1.0.0
+Version: 1.1.0
 Author: Karen Méndez
 Author URI: https://kajoha.github.io/karen-mendez/
 Text Domain:  digitalnomads
@@ -39,11 +39,13 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_1'); ?></h2>
-
+            <?php
+            digitalnomads_list_coworking(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_1'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_coworking_mini(); ?>
         </div>
 
 
@@ -54,11 +56,13 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_2'); ?></h2>
-
+            <?php
+            digitalnomads_list_meetingSpaces(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_2'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_meetingSpaces_mini(); ?>
         </div>
 
 
@@ -69,11 +73,13 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_3'); ?></h2>
-
+            <?php
+            digitalnomads_list_resources(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_3'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_resources_mini(); ?>
         </div>
 
 
