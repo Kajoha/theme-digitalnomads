@@ -4,7 +4,7 @@
 *Template Name: Template Digital Nomads - lodging
 Plugin URI:
 Description: Add Widgets
-Version: 1.0.0
+Version: 1.1.0
 Author: Karen Méndez
 Author URI: https://kajoha.github.io/karen-mendez/
 Text Domain:  digitalnomads
@@ -36,41 +36,47 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_1'); ?></h2>
-
+            <?php
+            digitalnomads_list_hotels(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_1'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_hotels_mini(); ?>
         </div>
 
 
     </section>
 
-    <section id="<?php the_field('id_menu_2'); ?>" class="section-content">
+    <section id="<?php the_field('id_menu_2'); ?>" class="section-content margin-home">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_2'); ?></h2>
-
+            <?php
+            digitalnomads_list_rentals(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_2'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_rentals_mini(); ?>
         </div>
 
 
     </section>
 
-    <section id="<?php the_field('id_menu_3'); ?>" class="section-content">
+    <section id="<?php the_field('id_menu_3'); ?>" class="section-content margin-home">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_3'); ?></h2>
-
+            <?php
+            digitalnomads_list_realEstate(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_3'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_realEstate_mini(); ?>
         </div>
 
     </section>

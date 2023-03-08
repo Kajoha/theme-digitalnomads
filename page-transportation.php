@@ -4,7 +4,7 @@
 *Template Name: Template Digital Nomads - transportation
 Plugin URI:
 Description: Add Widgets
-Version: 1.0.0
+Version: 1.1.0
 Author: Karen Méndez
 Author URI: https://kajoha.github.io/karen-mendez/
 Text Domain:  digitalnomads
@@ -37,55 +37,64 @@ endif; ?>
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_1'); ?></h2>
-
+            <?php
+            digitalnomads_list_carRental(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_1'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_carRental_mini(); ?>
         </div>
 
 
     </section>
 
-    <section id="<?php the_field('id_menu_2'); ?>" class="section-content">
+    <section id="<?php the_field('id_menu_2'); ?>" class="section-content margin-home">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_2'); ?></h2>
-
+            <?php
+            digitalnomads_list_shuttles(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_2'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_shuttles_mini(); ?>
         </div>
 
 
     </section>
 
-    <section id="<?php the_field('id_menu_3'); ?>" class="section-content">
+    <section id="<?php the_field('id_menu_3'); ?>" class="section-content margin-home">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_3'); ?></h2>
-
+            <?php
+            digitalnomads_list_privateDrivers(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_3'); ?> list</h3>
-
+            <?php
+            digitalnomads_list_privateDrivers_mini(); ?>
         </div>
 
 
     </section>
 
-    <section id="<?php the_field('id_menu_4'); ?>" class="section-content">
+    <section id="<?php the_field('id_menu_4'); ?>" class="section-content margin-home">
         <!--ESPACIO PARA CREAR SECCIONES DEL SUBMENU-->
         <!--IMPORTANTE -DESCUBRIR COMO ETIQUETAR EL CONTENIDO DE SERVICES- -->
         <div class="section-items">
             <h2><?php the_field('item_menu_4'); ?></h2>
-
+            <?php
+            digitalnomads_list_otherTrasportation(); ?>
         </div>
         <div class="section-list">
             <h3 class="section-list-title"><?php the_field('item_menu_4'); ?></h3>
+            <?php
+            digitalnomads_list_otherTrasportation_mini(); ?>
         </div>
     </section>
 
