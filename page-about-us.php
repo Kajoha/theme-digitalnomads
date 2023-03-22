@@ -30,7 +30,7 @@ endif; ?>
     </div>
 
 </main>
-<div class="FAQ">
+<div id="faq" class="FAQ">
     <section class="content page section margin-home">
         <div class="row">
 
