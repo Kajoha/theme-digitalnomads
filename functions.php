@@ -102,10 +102,11 @@ function digitalnomads_hero_img()
     wp_enqueue_style('custom');
 
     $img_home_css = "
-        body.home .site-header {
-            background-image: linear-gradient( rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url($img);
-        }
+     body.home .site-header {
+        background-image: url($img);
+      } 
     ";
+    // linear-gradient( rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.70)),
     wp_add_inline_style('custom', $img_home_css);
 }
 add_action('init', 'digitalnomads_hero_img');

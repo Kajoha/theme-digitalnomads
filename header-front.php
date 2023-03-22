@@ -15,13 +15,10 @@
         <!-- abro Barra de navegación-->
         <div class="content">
             <div class="content-nav">
-                <div class="logo"><a href="http://localhost/wordpress/"><img
-                            src="<?php echo get_template_directory_uri(); ?> /img/nuevo.png" alt=""></a>
+                <div class="logo"><a href="http://localhost/wordpress/"><img src="<?php echo get_template_directory_uri(); ?> /img/nuevo.png" alt=""></a>
                 </div>
                 <div class="hambur-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="46"
-                        height="46" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="46" height="46" viewBox="0 0 24 24" stroke-width="2.5" stroke="#73b731" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <line x1="4" y1="6" x2="20" y2="6" />
                         <line x1="4" y1="12" x2="20" y2="12" />
@@ -47,17 +44,20 @@
             </div>
         </div>
 
-        <div class="tagline text-center Iam">
-            <p>This is</p>
-            <b>
-                <h1 class="innerIam">
-                    <?php the_field('header_hero'); ?> <br>
-                    <?php the_field('content_hero'); ?> <br>
-                    <?php the_field('title_3'); ?> <br>
-                    <?php the_field('title_4'); ?>
-                </h1>
+        <div class="wrapper-hero">
+            <div class="tagline text-center Iam">
+                <p>This is</p>
+                <b>
+                    <h1 class="innerIam">
+                        <?php the_field('header_hero'); ?> <br>
+                        <?php the_field('content_hero'); ?> <br>
+                        <?php the_field('title_3'); ?> <br>
+                        <?php the_field('title_4'); ?>
+                    </h1>
 
-            </b>
+                </b>
+            </div>
         </div>
+
     </header>
     <!-- cierro Barra de navegación-->
