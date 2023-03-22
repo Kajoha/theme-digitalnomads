@@ -4,7 +4,7 @@
 *Template Name: Template Digital Nomads - services
 Plugin URI:
 Description: Add Widgets
-Version: 1.0.0
+Version: 1.1.0
 Author: Karen Méndez
 Author URI: https://kajoha.github.io/karen-mendez/
 Text Domain:  digitalnomads

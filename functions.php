@@ -88,7 +88,7 @@ function digitalnomads_widgets()
 add_action('widgets_init', 'digitalnomads_widgets');
 
 // Imagen Hero
-
+/*
 function digitalnomads_hero_img()
 {   // para optener el id de la página principal
     $front_page_id = get_option('page_on_front');
